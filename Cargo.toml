@@ -25,7 +25,7 @@ proptest-support = [ "proptest", "fenris-geometry/proptest-support", "nalgebra/p
 nalgebra = { workspace = true, features = [ "std", "serde-serialize" ] }
 nalgebra-sparse = { workspace = true, features = ["compare"] }
 davenport = "0.1.1"
-vtkio = "0.6"
+vtkio = { version = "0.6", default-features = false }
 num = "0.4"
 numeric_literals = "0.2.0"
 itertools = "0.10.5"
@@ -38,13 +38,13 @@ log = "0.4"
 rustc-hash = "1.1.0"
 thread_local = "1.1.2"
 eyre = "0.6"
-fenris-traits = { version="0.0.2", path = "fenris-traits" }
-fenris-paradis = { version="0.0.3", path = "fenris-paradis" }
-fenris-nested-vec = { version="0.0.1", path = "fenris-nested-vec" }
-fenris-sparse = { version= "0.0.5", path = "fenris-sparse" }
-fenris-geometry = { version= "0.0.6", path = "fenris-geometry", features = [ "proptest" ] }
-fenris-optimize = { version= "0.0.3", path = "fenris-optimize" }
-fenris-quadrature = { version= "0.0.4", path = "fenris-quadrature" }
+fenris-traits = { version="0.0.2" }
+fenris-paradis = { version="0.0.3" }
+fenris-nested-vec = { version="0.0.1" }
+fenris-sparse = { version= "0.0.5" }
+fenris-geometry = { version= "0.0.6", features = [ "proptest" ] }
+fenris-optimize = { version= "0.0.3" }
+fenris-quadrature = { version= "0.0.4" }
 mshio = "0.4.2"
 rstar = "0.10"
 fxhash = "0.2.1"
