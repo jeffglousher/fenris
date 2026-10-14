@@ -24,7 +24,7 @@ fenris-geometry = { path = ".", features = [ "proptest-support" ] }
 nalgebra = { workspace = true, default-features = true, features = [ "compare", "rand" ]}
 matrixcompare = { version="0.3", features = ["proptest-support"] }
 util = { path="../util" }
-fenris = { path = ".." }
+fenris = { path = "..", features = [ "mesh-io" ] }
 rand = "0.8.5"
 rand_distr = "0.4.3"
 rand_chacha = "0.3.1"

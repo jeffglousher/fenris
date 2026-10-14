@@ -19,13 +19,14 @@ rustdoc-args = [ "--html-in-header", "assets/doc-header.html",
 
 [features]
 default = [ ]
+mesh-io = [ "dep:vtkio", "dep:mshio" ]
 proptest-support = [ "proptest", "fenris-geometry/proptest-support", "nalgebra/proptest-support" ]
 
 [dependencies]
 nalgebra = { workspace = true, features = [ "std", "serde-serialize" ] }
 nalgebra-sparse = { workspace = true, features = ["compare"] }
 davenport = "0.1.1"
-vtkio = { version = "0.6", default-features = false }
+vtkio = { version = "0.6", default-features = false, optional = true }
 num = "0.4"
 numeric_literals = "0.2.0"
 itertools = "0.10.5"
@@ -45,13 +46,13 @@ fenris-sparse = { version= "0.0.5" }
 fenris-geometry = { version= "0.0.6", features = [ "proptest" ] }
 fenris-optimize = { version= "0.0.3" }
 fenris-quadrature = { version= "0.0.4" }
-mshio = "0.4.2"
+mshio = { version = "0.4.2", optional = true }
 rstar = "0.10"
 fxhash = "0.2.1"
 parking_lot = "0.12.1"
 
 [dev-dependencies]
-fenris = { path = ".", features = [ "proptest-support" ]}
+fenris = { path = ".", features = [ "proptest-support", "mesh-io" ]}
 fenris-solid = { path = "fenris-solid" }
 nalgebra = { workspace = true, features = [ "serde-serialize", "compare" ] }
 proptest = "1.0"

@@ -13,6 +13,7 @@ pub mod connectivity;
 pub mod element;
 pub mod error;
 pub mod integrate;
+#[cfg(feature = "mesh-io")]
 pub mod io;
 pub mod mesh;
 pub mod quadrature;
@@ -31,6 +32,7 @@ mod mesh_convert;
 pub extern crate eyre;
 pub extern crate nalgebra;
 pub extern crate nalgebra_sparse;
+#[cfg(feature = "mesh-io")]
 pub extern crate vtkio;
 
 pub use fenris_traits::Real;
