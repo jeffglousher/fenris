@@ -52,6 +52,7 @@ fxhash = "0.2.1"
 parking_lot = "0.12.1"
 
 [dev-dependencies]
+vtkio = { version = "0.6", default-features = false, features = [ "xml", "compression" ] }
 fenris = { path = ".", features = [ "proptest-support", "mesh-io" ]}
 fenris-solid = { path = "fenris-solid" }
 nalgebra = { workspace = true, features = [ "serde-serialize", "compare" ] }
